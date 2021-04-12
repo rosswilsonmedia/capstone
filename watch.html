@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Watch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="capstoneStyles.css">
+	    <link rel="icon" href="icon/favicon.png" sizes="32x32">
+	    <script src="https://kit.fontawesome.com/6687b22cea.js" crossorigin="anonymous"></script>
+        <header role="banner">
+            <nav role="navigation" id="largeNav">
+                <a class="navLink" href="home.html">Home</a>
+                <a class="navLink" href="about.html">About</a>
+                <div id="navLogo"><a href="home.html"><img src="images/logos/headerLogoNoText.png" alt="capstone logo"/></a></div>
+                <a class="navLink" href="projects.html">Projects</a>
+                <a class="navLink active" href="watch.html">Watch</a>
+            </nav>
+            <nav role="navigation" id="mobileNavHeader">
+                <a href="home.html"><img src="images/logos/headerLogoNoText.png"/></a>
+                <div onclick="toggleMobileNav()" onmouseover="" id="hamburger">
+                    <hr id="topBun"/>
+                    <hr id="patty"/>
+                    <hr id="bottomBun"/>
+                </div>
+            </nav>
+        </header>
+    </head>
+    <body>
+        <div role="navigation" id="mobileNavPage">
+            <ul>
+                <li><a class="mobileNavLink" href="home.html">Home</a></li>
+                <li><a class="mobileNavLink" href="about.html">About</a></li>
+                <li><a class="mobileNavLink" href="projects.html">Projects</a></li>
+                <li><a class="mobileNavLink active" href="watch.html">Watch</a></li>    
+            </ul>
+        </div>
+        <main role="main" id="watch">
+            <section id="container">
+                <div id="playerWrapper">
+                    <div id="player">
+                        <div id="dateMessage">
+                            <div>
+                                <h1>Mark Your Calendar!</h1>
+                                <p>Capstone is April 27, 2021 @ 8PM EDT</p></br></br>
+                                <!-- </br><p>If you are seeing this message, click here to watch the show on YouTube!</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer role="contentinfo">
+                <p>&copy; 2020 Indy Blue Entertainment</p>
+            </footer>
+        </main>
+        <script type="text/javascript" src="js/mobileNav.js"></script>
+        <script type="text/javascript" src="js/datedChanges.js"></script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="capstoneStyles.css">
+	    <link rel="icon" href="icon/favicon.png" sizes="32x32">
+	    <script src="https://kit.fontawesome.com/6687b22cea.js" crossorigin="anonymous"></script>
+        <header role="banner">
+            <nav role="navigation" id="largeNav">
+                <a class="navLink active" href="home.html">Home</a>
+                <a class="navLink" href="about.html">About</a>
+                <div id="navLogo"><a href="home.html"><img src="images/logos/headerLogoNoText.png" alt="capstone logo"/></a></div>
+                <a class="navLink" href="projects.html">Projects</a>
+                <a class="navLink" href="watch.html">Watch</a>
+            </nav>
+            <nav role="navigation" id="mobileNavHeader">
+                <a href="home.html"><img src="images/logos/headerLogoNoText.png"/></a>
+                <div onclick="toggleMobileNav()" onmouseover="" id="hamburger">
+                    <hr id="topBun"/>
+                    <hr id="patty"/>
+                    <hr id="bottomBun"/>
+                </div>
+            </nav>
+        </header>
+    </head>
+    <body>
+        <div role="navigation" id="mobileNavPage">
+            <ul>
+                <li><a class="mobileNavLink active" href="home.html">Home</a></li>
+                <li><a class="mobileNavLink" href="about.html">About</a></li>
+                <li><a class="mobileNavLink" href="projects.html">Projects</a></li>
+                <li><a class="mobileNavLink" href="watch.html">Watch</a></li>    
+            </ul>
+        </div>
+        <main role="main" id="home">
+            <div id="slideControls">
+                <div class="control 0"></div>
+                <div class="control 1"></div>
+                <div class="control 2"></div>
+            </div>
+            <section id="watchAd" class="ad">
+                <img src="images/logos/logoHiRes.png" alt="Capstone 2021: A Virtual Event">
+                <a class="button" href="watch.html">Watch Live on April 27th! <i class="fas fa-arrow-right"></i></a>
+                <a class="arrow down"><i class="fas fa-chevron-down"></i></a>
+            </section>
+            <section id="aboutAd" class="ad">
+                <h1>What is Capstone?</h1>
+                <a class="button" href="about.html">Find Out More About Us! <i class="fas fa-arrow-right"></i></a>
+                <a class="arrow up"><i class="fas fa-chevron-up"></i></a>
+                <a class="arrow down"><i class="fas fa-chevron-down"></i></a>
+            </section>
+            <section id="projectsAd" class="ad">
+                <h1>Discover the next big thing!</h1>
+                <a class="button" href="projects.html">Check Out Our Projects! <i class="fas fa-arrow-right"></i></a>
+                <a class="arrow up"><i class="fas fa-chevron-up"></i></a>
+                <footer role="contentinfo">
+                    <p>&copy; 2020 Indy Blue Entertainment</p>
+                </footer>
+            </section>
+        </main>
+        <script type="text/javascript" src="js/home.js"></script>
+        <script type="text/javascript" src="js/mobileNav.js"></script>
+        <script type="text/javascript" src="js/datedChanges.js"></script>
+    </body>
+</html>
