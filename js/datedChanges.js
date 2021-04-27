@@ -35,65 +35,65 @@ if(noProjectMessage&&d<showTime){
 
 //Watch Page Changes
 var watchPagePlayer=document.querySelector('#playerWrapper');
-if(watchPagePlayer&&d>=dayOf){
-    var tag = document.createElement('script');
+// if(watchPagePlayer&&d>=dayOf){
+//     var tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+//     tag.src = "https://www.youtube.com/iframe_api";
+//     var firstScriptTag = document.getElementsByTagName('script')[0];
+//     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: '100%',
-            width: '100%',
-            videoId: 'qxo63Tu5Bq8',
-            playerVars: {rel: 0, showinfo: 0, ecver: 2},
-            events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-            }
-        });
-    }
+//     var player;
+//     function onYouTubeIframeAPIReady() {
+//         player = new YT.Player('player', {
+//             height: '100%',
+//             width: '100%',
+//             videoId: 'qxo63Tu5Bq8',
+//             playerVars: {rel: 0, showinfo: 0, ecver: 2},
+//             events: {
+//             'onReady': onPlayerReady,
+//             'onStateChange': onPlayerStateChange
+//             }
+//         });
+//     }
 
-    function onPlayerReady(event) {
-        //event.target.playVideo();
-    }
-    document.getElementsByClassName('noJS').style.display = "none";
+//     function onPlayerReady(event) {
+//         //event.target.playVideo();
+//     }
+//     document.getElementsByClassName('noJS').style.display = "none";
 
-    /* --YT Player States--
-    -1 – unstarted
-    0 – ended
-    1 – playing
-    2 – paused
-    3 – buffering
-    5 – video cued
-    --End of YT Player States--*/
-    var timer;
-    var timeout;
-    var currentTime = 0;
-    function onPlayerStateChange(event) {
-        console.log(player.getPlayerState());
-        if (player.getPlayerState() === 1) {
-            clearTimeout(timeout);
-            document.getElementById('watch').style.backgroundColor = "black";
-            document.getElementsByTagName('header')[0].style.backgroundColor = "var(--flatBlack)";
-            document.getElementsByTagName('header')[0].style.boxShadow = "0px 1px 6px var(--lightBlue)";
-            document.getElementById('player').style.borderRadius = "0";
-        } else if (player.getPlayerState() === 2 || player.getPlayerState() === 0) {
-            timeout = setTimeout(function() {
-                document.getElementById('watch').style.backgroundColor = "transparent";
-                document.getElementsByTagName('header')[0].style.backgroundColor = "var(--lightBlue)";
-                document.getElementsByTagName('header')[0].style.boxShadow = "black 0px 0px 5px";
-                document.getElementById('player').style.borderRadius = "1em";
+//     /* --YT Player States--
+//     -1 – unstarted
+//     0 – ended
+//     1 – playing
+//     2 – paused
+//     3 – buffering
+//     5 – video cued
+//     --End of YT Player States--*/
+//     var timer;
+//     var timeout;
+//     var currentTime = 0;
+//     function onPlayerStateChange(event) {
+//         console.log(player.getPlayerState());
+//         if (player.getPlayerState() === 1) {
+//             clearTimeout(timeout);
+//             document.getElementById('watch').style.backgroundColor = "black";
+//             document.getElementsByTagName('header')[0].style.backgroundColor = "var(--flatBlack)";
+//             document.getElementsByTagName('header')[0].style.boxShadow = "0px 1px 6px var(--lightBlue)";
+//             document.getElementById('player').style.borderRadius = "0";
+//         } else if (player.getPlayerState() === 2 || player.getPlayerState() === 0) {
+//             timeout = setTimeout(function() {
+//                 document.getElementById('watch').style.backgroundColor = "transparent";
+//                 document.getElementsByTagName('header')[0].style.backgroundColor = "var(--lightBlue)";
+//                 document.getElementsByTagName('header')[0].style.boxShadow = "black 0px 0px 5px";
+//                 document.getElementById('player').style.borderRadius = "1em";
                 
-            }, 1500);
-        }
-    }
-    function stopVideo() {
-        player.stopVideo();
-    }
-}
+//             }, 1500);
+//         }
+//     }
+//     function stopVideo() {
+//         player.stopVideo();
+//     }
+// }
 
 //Watch Nav Tab Changes
 var watchTabs=document.querySelectorAll('[role="navigation"] a[href="watch.html"]');
