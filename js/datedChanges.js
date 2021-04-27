@@ -5,6 +5,18 @@ var showTime=new Date("2021-04-27T20:00:00-04:00");
 var endOfShow=new Date("2021-04-27T20:42:00-04:00");
 var pageName=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
 
+//Watch Nav Tab Changes
+var watchTabs=document.querySelectorAll('[role="navigation"] a[href="https://rosswilsonmedia.github.io/capstone/watch"]');
+if(d>=dayOf&&d<showTime){
+    for(i=0; i<watchTabs.length; i++){
+        watchTabs[i].innerHTML='Watch Live!';
+    }
+}else if(d>=showTime){
+    for(i=0; i<watchTabs.length; i++){
+        watchTabs[i].innerHTML='Watch Now!';
+    }
+}
+
 //Home Page Changes
 var watchHomeButton=document.querySelector('.button[href="https://rosswilsonmedia.github.io/capstone/watch"]');
 if(watchHomeButton){
@@ -92,17 +104,5 @@ if(watchPagePlayer&&d>=dayOf){
     }
     function stopVideo() {
         player.stopVideo();
-    }
-}
-
-//Watch Nav Tab Changes
-var watchTabs=document.querySelectorAll('[role="navigation"] a[href="https://rosswilsonmedia.github.io/capstone/watch"]');
-if(d>=dayOf&&d<showTime){
-    for(i=0; i<watchTabs.length; i++){
-        watchTabs[i].innerHTML='Watch Live!';
-    }
-}else if(d>=showTime){
-    for(i=0; i<watchTabs.length; i++){
-        watchTabs[i].innerHTML='Watch Now!';
     }
 }
