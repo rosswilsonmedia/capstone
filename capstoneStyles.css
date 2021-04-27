@@ -181,7 +181,7 @@ header {
     height: 100%;
     padding: 0.5em;
     text-align: center;
-    font-size: 250%;
+    font-size: 200%;
     color: var(--pink);
     text-decoration: none;
 }
@@ -190,16 +190,17 @@ header {
     position: absolute;
     width:0;
     padding-bottom: .25em;
+    margin: 0 12.5%;
     border-bottom: 5px solid var(--pink);
     left: 0;
     display: block;
     transition: width .3s ease;
 }
 .mobileNavLink:hover::after {
-    width: 100%;
+    width: 75%;
 }
 .mobileNavLink.active::after {
-    width: 100%;
+    width: 75%;
 }
 #mobileNavPage li {
     padding: 1.25em 0;
@@ -470,7 +471,6 @@ footer {
     display: none;
 }
 .noProjectsInfo {
-    width: 100%;
     text-align: center;
 }
 
@@ -524,6 +524,12 @@ footer {
 }
 #dateMessage p:first-of-type {
     font-size: 150%;
+}
+#playerWrapper a {
+    color: var(--flatBlack);
+    display: grid;
+    justify-content: center;
+    font-size: 125%;
 }
 #watch footer {
     position: absolute;
