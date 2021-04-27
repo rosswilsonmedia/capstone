@@ -1,8 +1,8 @@
 //Init
 var d=new Date;
 var dayOf=new Date("2021-04-27T00:00:00-04:00");
-var showTime=new Date("2021-04-27T08:00:00-04:00");
-var endOfShow=new Date("2021-04-27T09:00:00-04:00");
+var showTime=new Date("2021-04-27T20:00:00-04:00");
+var endOfShow=new Date("2021-04-27T20:40:00-04:00");
 var pageName=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
 
 //Home Page Changes
